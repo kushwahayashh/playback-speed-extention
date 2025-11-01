@@ -1,0 +1,15 @@
+# Extension files (if you want to ignore built versions)
+*.crx
+*.pem
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+

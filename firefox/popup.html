@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Speed Controller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+    <div class="speed-hero">
+      <div class="speed-value">
+        <span id="current-speed">1.0</span>
+        <span class="x">x</span>
+      </div>
+      <div class="speed-label">playback speed</div>
+    </div>
+
+    <div class="presets-section">
+      <div class="presets-grid">
+        <button class="preset" data-speed="0.25">0.25</button>
+        <button class="preset" data-speed="0.5">0.5</button>
+        <button class="preset" data-speed="0.75">0.75</button>
+        <button class="preset active" data-speed="1.0">1.0</button>
+        <button class="preset" data-speed="1.25">1.25</button>
+        <button class="preset" data-speed="1.5">1.5</button>
+        <button class="preset" data-speed="1.75">1.75</button>
+        <button class="preset" data-speed="2.0">2.0</button>
+        <button class="preset" data-speed="2.25">2.25</button>
+        <button class="preset" data-speed="2.5">2.5</button>
+        <button class="preset" data-speed="2.75">2.75</button>
+        <button class="preset" data-speed="3.0">3.0</button>
+        <button class="preset" data-speed="3.25">3.25</button>
+        <button class="preset" data-speed="3.5">3.5</button>
+        <button class="preset" data-speed="3.75">3.75</button>
+        <button class="preset" data-speed="4.0">4.0</button>
+      </div>
+    </div>
+
+    <div class="custom-control">
+      <div class="custom-input-wrapper">
+        <input 
+          type="number" 
+          id="custom-speed-input" 
+          min="0.25" 
+          max="4" 
+          step="0.25" 
+          value="1.0"
+          placeholder="1.0"
+        >
+        <span class="input-x">x</span>
+      </div>
+      <button id="apply-custom-speed" class="apply-btn">apply</button>
+    </div>
+
+    <div class="adjust-controls">
+      <button class="ctrl-btn" id="decrease-speed">
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="reset-btn" id="reset-speed">RESET</button>
+      <button class="ctrl-btn" id="increase-speed">
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+          <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
